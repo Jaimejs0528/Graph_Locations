@@ -41,7 +41,7 @@ bool hasRoute(struct route *route, unsigned short id);
 
 void printLocation(struct location *value);
 
-void printRoutes(struct route routes);
+void printRoutes(struct route *routes);
 
 double calcDistCartesian(struct point init, struct point final);
 

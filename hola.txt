@@ -1,2 +1,0 @@
-    ID	         NOMBRE	COORDENADAS
-     1	        Londres	(2,00,5,00)

@@ -12,6 +12,7 @@
 #define TOTAL_ROUTES 20
 
 struct location array[TOTAL_ROUTES];
+static int amount = 0;
 
 struct location *createLocation(unsigned short id, float x, float y, char *name) {
     struct location *newLocation = malloc(sizeof(struct location));
@@ -24,11 +25,33 @@ struct location *createLocation(unsigned short id, float x, float y, char *name)
     return newLocation;
 }
 
-void printRoutes(struct route routes) {
-    int i;
-    printf("\t%6s\t%10s\n", "RUTAS", "DISTANCIAS");
-    for (i = 0; i < routes.amount && i < routes.size; i++) {
-        printf("\t%6hu\t%10.5lf\n", *(routes.routes + i), *(routes.distances + i));
+void addLocation() {
+//    char input[30];
+    char *nombre = malloc(sizeof(char) * 30);
+    unsigned short id;
+    float x, y;
+    puts("\tDatos de la localizacion\n");
+    puts("Nombre:\n");
+    scanf("%s", nombre);
+    puts("Id:\n");
+    scanf("%hu", &id);
+//    id = strtol(input,NULL,10);
+    puts("Coordenadas (X,Y):\n");
+    scanf("%f|%f", &x, &y);
+    array[amount] = *createLocation(id, x, y, nombre);
+    printLocation(&array[amount]);
+    amount++;
+
+}
+
+void printRoutes(struct route *routes) {
+    if (!routes) printf("%s\n\n", NOT_ROUTES);
+    else {
+        int i;
+        printf("\t%6s\t%10s\n", "RUTAS", "DISTANCIAS");
+        for (i = 0; i < routes->amount && i < routes->size; i++) {
+            printf("\t%6hu\t%10.5lf\n", *(routes->routes + i), *(routes->distances + i));
+        }
     }
 }
 
@@ -36,7 +59,7 @@ void printLocation(struct location *value) {
     printf("%6s\t%15s\t%10s\n", "ID", "NOMBRE", "COORDENADAS");
     printf("%6d\t%15s\t(%4.2f,%4.2f)\n", value->id, value->name, value->pointLoc.x, value->pointLoc.y);
     puts("\n\t\tTABLA DE RUTAS");
-    printRoutes(*value->routesLoc);
+    printRoutes(value->routesLoc);
 }
 
 void addRoute(struct location *origin, struct location *destination) {

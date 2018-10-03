@@ -7,5 +7,6 @@
 
 #define ROUTE_ALREADY_EXIST "La ruta ya existe en esa localización!"
 #define LOCATION_NO_EXISTENT "La localización no fue encontrada"
+#define NOT_ROUTES "La localizacion no tiene rutas"
 
 #endif //GRAFO_ERRORMESSAGE_H

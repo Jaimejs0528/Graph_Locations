@@ -20,5 +20,6 @@ int main(int argc, char *argv[]) {
     fprintf(open,"%6s\t%15s\t%10s\n", "ID", "NOMBRE", "COORDENADAS");
     fprintf(open,"%6d\t%15s\t(%4.2f,%4.2f)\n", r->id, r->name, r->pointLoc.x, r->pointLoc.y);
     fclose(open);
+    addLocation();
     return 0;
 }
