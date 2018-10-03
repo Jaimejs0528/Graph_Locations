@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Jaime.JS/Documents/Desarrollos/C & C++/grafo/Library/Message/errorMessage.h
+
+C:/Users/Jaime.JS/Documents/Desarrollos/C & C++/grafo/Library/grafo2D.c
+stdlib.h
+-
+string.h
+-
+stdbool.h
+-
+stdio.h
+-
+math.h
+-
+grafo2D.h
+C:/Users/Jaime.JS/Documents/Desarrollos/C & C++/grafo/Library/grafo2D.h
+
+C:/Users/Jaime.JS/Documents/Desarrollos/C & C++/grafo/Library/grafo2D.h
+stdbool.h
+-
+Message/errorMessage.h
+C:/Users/Jaime.JS/Documents/Desarrollos/C & C++/grafo/Library/Message/errorMessage.h
+
+C:/Users/Jaime.JS/Documents/Desarrollos/C & C++/grafo/main.c
+stdio.h
+-
+locale.h
+-
+malloc.h
+-
+wchar.h
+-
+Library/grafo2D.h
+C:/Users/Jaime.JS/Documents/Desarrollos/C & C++/grafo/Library/grafo2D.h
+
